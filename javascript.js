@@ -22,9 +22,11 @@ function setSquares() {
         markers[i].addEventListener('mousedown', function change() { markers[i].style.backgroundColor = colourSelect; 
         if(colourRainbow === "rainbow") {
             rainbowMode();
-            console.log("test");
-        } else {
-
+        markers[i].addEventListener('mouseenter', function change() { 
+            markers[i].style.backgroundColor = colourSelect; 
+            if(colourRainbow === "rainbow") {
+                rainbowMode();
+                console.log("test");
         }}, false);
         markers[i].style.cssText = `
         height: ` + 480/number + `px;
@@ -35,6 +37,7 @@ function setSquares() {
     grid-template-columns: repeat(` + number + `, 1fr);
     grid-template-rows: repeat(` + number + `, 1fr);`;
 }
+
 
 function changeSquares() {
     document.getElementById("grids").innerHTML = "";
@@ -56,3 +59,4 @@ function rainbowMode() {
         colourSelect += letters[Math.floor(Math.random() * 16)]
     }
 }
+
