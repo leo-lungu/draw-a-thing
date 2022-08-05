@@ -6,12 +6,18 @@
 </head>
 <body>
     <div id = "grids"></div>
-    
     <div class="slidecontainer">
       <input type="range" min="1" max="128" value="16" class="slider" id="myRange" onchange="newSquares(this.value);">
       <input type="text" id="textInput" value="">
     </div>
-    <div id = "palette"></div>
+    <div id = "palette">
+      <div id = "colourPicker">
+        <input type="color" id="colorpicker" value="#0000ff" onchange ="colourSelected()">
+        <button id="clear" onclick = "clearSketch()">Clear</button>
+        <button id="colour" onclick = "colourSelect = '#ffffff'">Rubber</button>
+        <button id="rainbow" onclick = "colourRainbow = 'rainbow'">rainbow</button>
+      </div>
+    </div>
     <script src = "javascript.js"></script>
 </body>
 </html>

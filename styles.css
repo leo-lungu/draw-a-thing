@@ -1,6 +1,7 @@
 html,body{margin:0;}
 
 html,body{margin:0;}
+
 div#grids {
     display: grid;
     width: 50vw;
@@ -11,13 +12,12 @@ div#grids {
     height: 480px;
     margin: 0 auto;
     display: grid;
+    border: 1px solid ;
   }
   
-
   #grid {
     width: 7.5px;
     height: 7.5px;
-    border: 1px solid ;
     box-sizing: border-box;
   }
   
@@ -25,6 +25,7 @@ div#grids {
     text-align: center;
     margin: 0 auto;
 }
+
 .slider {
     -webkit-appearance: none;
     width: 45%;
@@ -55,17 +56,4 @@ div#grids {
     border-radius: 50%;
     background: #04AA6D;
     cursor: pointer;
-  }
-
-
-  div#palette {
-    display: grid;
-    width: 50vw;
-    height: 50vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    width: 20px;
-    height: 360px;
-    margin: 0 auto;
-    display: grid;
   }

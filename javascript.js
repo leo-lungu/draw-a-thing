@@ -1,5 +1,8 @@
 let numberSquares = 256;
 let number = 16;
+let colourSelect = "black";
+let colourRainbow = "#";
+let letters = "0123456789ABCDEF"
 const container = document.querySelector('#grids');
 setSquares();
 
@@ -16,7 +19,13 @@ function setSquares() {
         markers[i] = document.createElement('div');
         markers[i].id = 'grid';
         container.appendChild(markers[i]);
-        markers[i].addEventListener('click', function change() { markers[i].style.backgroundColor= "red"}, false);
+        markers[i].addEventListener('mousedown', function change() { markers[i].style.backgroundColor = colourSelect; 
+        if(colourRainbow === "rainbow") {
+            rainbowMode();
+            console.log("test");
+        } else {
+
+        }}, false);
         markers[i].style.cssText = `
         height: ` + 480/number + `px;
         width:` + 480/number + `px;`;
@@ -32,5 +41,18 @@ function changeSquares() {
     setSquares();
 }
 
+function colourSelected() {
+    colourSelect = document.getElementById('colorpicker').value;
+    console.log(colourSelect);
+}
 
+function clearSketch() {
+    changeSquares();
+}
 
+function rainbowMode() {
+    colourSelect = "#"
+    for (let i = 0; i < 6; i++) {
+        colourSelect += letters[Math.floor(Math.random() * 16)]
+    }
+}
