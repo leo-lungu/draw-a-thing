@@ -10,6 +10,7 @@ function newSquares(val) {
     document.getElementById('textInput').value = val; 
     number = val;
     numberSquares = number * number;
+        document.getElementById("size").innerHTML = "Size: " + number + " x " + number;
     changeSquares();
 }
 
@@ -19,9 +20,6 @@ function setSquares() {
         markers[i] = document.createElement('div');
         markers[i].id = 'grid';
         container.appendChild(markers[i]);
-        markers[i].addEventListener('mousedown', function change() { markers[i].style.backgroundColor = colourSelect; 
-        if(colourRainbow === "rainbow") {
-            rainbowMode();
         markers[i].addEventListener('mouseenter', function change() { 
             markers[i].style.backgroundColor = colourSelect; 
             if(colourRainbow === "rainbow") {
