@@ -16,6 +16,7 @@ html,body{
   color: #fff;
   cursor: pointer;
   padding-right: 2%;
+  text-align: center;
 }
 
 div#grids {
