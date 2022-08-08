@@ -1,6 +1,22 @@
-html,body{margin:0;}
+html,body{
+  margin:0;
+  background-image: url('background.gif');
+  background-repeat: no-repeat;
+  height: 100%;
 
-html,body{margin:0;}
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#size, .button {
+  background-color: #343A40;
+  border-radius: 4px;  
+  color: #fff;
+  cursor: pointer;
+  padding-right: 2%;
+}
 
 div#grids {
     display: grid;
@@ -13,7 +29,8 @@ div#grids {
     margin: 0 auto;
     margin-top: 1%;
     margin-bottom: 1%;
-    border: 1px solid ;
+    border: 2px solid ;
+    background-color: white;
   }
   
   #grid {
